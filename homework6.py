@@ -13,7 +13,7 @@ async def user_register(user_name: str, age: int) -> dict:
     users[current_index] = mess
     return {"message": f"User {current_index} is registered"}
 @app.put("/user/{user_id}/{user_name}/{age}")
-async def update_user(user_id: int, username: str, age: int) -> dict:
+async def update_user(user_id: int, user_name: str, age: int) -> dict:
     users[user_id] = f"Имя: {user_name}, возраст: {age}"
     return {"message": f"The user {user_id} is updated"}
 @app.delete("/user/{user_id}")
